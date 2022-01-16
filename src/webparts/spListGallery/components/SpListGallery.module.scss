@@ -1,0 +1,183 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+
+.spListGallery {
+  .column {
+    @include ms-Grid-col;
+    @include ms-lg10;
+    @include ms-xl8;
+    @include ms-xlPush2;
+    @include ms-lgPush1;
+  }
+
+  .title {
+    @include ms-font-xl;
+    @include ms-fontColor-white;
+  }
+
+  .subTitle {
+    @include ms-font-l;
+    @include ms-fontColor-white;
+  }
+
+  .description {
+    @include ms-font-l;
+    @include ms-fontColor-white;
+  }
+
+  .button {
+    // Our button
+    text-decoration: none;
+    height: 32px;
+
+    // Primary Button
+    min-width: 80px;
+    background-color: $ms-color-themePrimary;
+    border-color: $ms-color-themePrimary;
+    color: $ms-color-white;
+
+    // Basic Button
+    outline: transparent;
+    position: relative;
+    font-family: "Segoe UI WestEuropean","Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: $ms-font-size-m;
+    font-weight: $ms-font-weight-regular;
+    border-width: 0;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 16px;
+
+    .label {
+      font-weight: $ms-font-weight-semibold;
+      font-size: $ms-font-size-m;
+      height: 32px;
+      line-height: 32px;
+      margin: 0 4px;
+      vertical-align: top;
+      display: inline-block;
+    }
+  }
+}
+
+.accordion {
+  background-color: #b3c4d9;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 5px;
+  background-color: white;
+  max-height: 150px;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  float: left;
+}
+div.boxed {
+  margin: 5px;
+  padding: 5px 5px 5px 5px;
+  background-color: #cbe3cd;
+  border: 1px solid black;
+  opacity: 0.6;
+  width: 90%;
+  height: 110px;
+}
+
+div.boxed p {
+  margin: 1%;
+  font-weight: bold;
+  color: #000000;
+}
+.downicon{
+float: right;
+}
+
+.expandCollapse {
+  .container {
+    margin: 1px auto;
+  }
+
+  .row {
+    @include ms-Grid-row;
+    padding: 10px;
+  }
+
+  .buttonExpandCollapse {
+    background: none !important;
+    border: none;
+    padding: 0 !important;
+    cursor: pointer;
+  }
+
+  .announcementItem {
+    border-spacing: 0px !important;
+    border: 1px solid #f3f3f3;
+    height: auto;
+    overflow: hidden;
+  }
+
+  .titleRow {
+    font-size: 16px !important;
+    padding-left: 10px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border: none !important;
+    background-color: #fafafa;
+    justify-content: space-between !important;
+    align-items: center;
+    display: flex;
+    padding-right: 20px;
+  }
+
+  .descriptionRow {
+    padding-left: 10px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 20px;
+  }
+
+  .justifyContentEnd {
+    justify-content: flex-end !important;
+    display: flex;
+    align-items: baseline;
+  }
+
+  a {
+    color: #0077cc;
+    text-decoration: none;
+
+    &:visited {
+      color: #0077cc;
+      text-decoration: none;
+    }
+
+    &:hover {
+      color: #0077cc;
+      text-decoration: none;
+    }
+  }
+}
